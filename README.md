@@ -1,24 +1,37 @@
-# README
+# REDPR
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How to start working on project
 
-Things you may want to cover:
+## Initialization
 
-* Ruby version
+```
+$ git clone git@github.com:amberaries/redpr.git
+$ docker-compose build
+$ docker-compose run --rm runner yarn install
+$ docker-compose run --rm runner ./bin/setup
+```
 
-* System dependencies
+## Commands
 
-* Configuration
+```
+$ docker-compose up rails
+$ docker-compose up rails webpacker
+```
 
-* Database creation
+## Tips & Tricks
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ docker-compose run --rm runner
+$ docker-compose run --rm runner [<COMMAND>]
+$ docker-compose run --rm runner bundle outdated
+$ docker-compose run --rm runner bundle update
+$ docker-compose run --rm runner bundle install
+$ docker-compose run --rm runner rails db:reset
+$ docker-compose run --rm runner rails db:create
+$ docker-compose run --rm runner rails db:migrate
+$ docker-compose run --rm runner rails g controller promo index
+$ RAILS_ENV=test docker-compose run --rm runner rspec spec
+$ RAILS_ENV=test docker-compose run --rm runner rspec --format documentation
+$ RAILS_ENV=test docker-compose run --rm runner rspec --profile 2
+$ RAILS_ENV=test docker-compose run --rm runner rspec --only-failures
+```
