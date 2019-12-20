@@ -5,6 +5,7 @@ ruby '2.6.4'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'devise'
 gem 'haml'
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '>= 0.18', '< 2.0'

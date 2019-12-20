@@ -5,6 +5,7 @@ class ActionDispatch::Routing::Mapper
 end
 
 Rails.application.routes.draw do
+  devise_for :accounts
   draw :api
   draw :app
   draw :users
@@ -13,5 +14,5 @@ Rails.application.routes.draw do
     draw :admin
   end
 
-
+  root to: 'promo#index'
 end
