@@ -11,6 +11,7 @@ environment.plugins.prepend(
         jQuery: 'jquery',
         jquery: 'jquery',
         'window.Tether': 'tether',
+        Rails: "@rails/ujs",
         Popper: ['popper.js', 'default'],
     })
 )
