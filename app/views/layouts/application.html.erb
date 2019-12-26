@@ -4,15 +4,12 @@
     <title>Redpr</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_pack_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
-    <header>
-      <%= render "layouts/nav/public" %>
-    </header>
+    <%= render "layouts/nav/public" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
